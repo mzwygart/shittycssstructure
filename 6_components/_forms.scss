@@ -1,0 +1,43 @@
+.form-group {
+  @include space('mb', $space-4, '')
+
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    display: inline;
+    font-weight: normal;
+    margin-left: .3em;
+  }
+
+  .label + small,
+  label + small {
+    margin-top: -$space-2;
+    margin-bottom: $space-2;
+  }
+}
+
+.required {
+  color: $color-error;
+}
+
+.label {
+  @extend label;
+}
+
+.formError {
+  ul {
+    display: none;
+    margin: 0;
+  }
+
+  &--hasError {
+    @include space('mt', $space-10, '', '', '', $space-24);
+    padding: $space-4;
+    background: #fae5e5;
+
+    ul { display: block; }
+  }
+
+  li:last-child {
+    margin: 0;
+  }
+}

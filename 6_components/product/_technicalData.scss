@@ -1,0 +1,20 @@
+.technicalData {
+  @include responsive-font-size( $font-size-6, '', '', '', '');
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.technicalData__item {
+  width: calc(50% - 10px);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.technicalData__label {
+  width: calc(50% - 10px);
+}
+
+.technicalData__value {
+  width: calc(50% - 10px);
+}

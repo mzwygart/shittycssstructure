@@ -1,0 +1,17 @@
+.block1img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.block1img__col1 {
+  @media (min-width: 768px){
+    width: calc(40% - 10px);
+  }
+}
+
+.block1img__col2 {
+  @media (min-width: 768px){
+    width: calc(60% - 10px);
+  }
+}

@@ -1,0 +1,55 @@
+.accordion {
+  @include responsive-font-size( $font-size-8, '', '', '', '');
+}
+
+.accordion__tab {
+  border-top: 1px solid $color-grey-10;
+
+  &:first-child {
+    border: none;
+  }
+}
+
+.accordion__content {
+  @include space('pb', $space-4, '', '', $space-8, $space-12, )
+}
+
+.accordion__button {
+  @include space('px', 0, '', '', '', '', '')
+  @include space('py', $space-4, '', '', $space-8, $space-12, )
+  
+  border: none;
+  background: none;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  padding-left: 20px;
+
+  .icon {
+    top: calc(50% - 5px);
+    left: 0;
+    height: 10px;
+    width: 6px;
+    position: absolute;
+    transition: transform .2s ease;
+    fill: $color-primary;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.accordion__button.open {
+
+  .icon {
+    transform: rotate(90deg)
+  }
+}

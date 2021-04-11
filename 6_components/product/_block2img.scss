@@ -1,0 +1,19 @@
+.block2img {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.block2img__img {
+  width: calc(50% - 10px);
+}
+
+.block2img__text {
+  @include space('p', $space-12, '', '', '', '');
+
+  position: absolute;
+  width: 33%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+}

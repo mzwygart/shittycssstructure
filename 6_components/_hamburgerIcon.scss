@@ -1,0 +1,37 @@
+.hamburgerIcon {
+  width: 16px;
+  height: 24px;
+  display: inline-block;
+  flex-shrink: 0;
+
+  &__1,
+  &__2,
+  &__3 {
+    stroke: black;
+    transition: transform .1s ease;
+  }
+
+  &__4 {
+    stroke: black;
+    opacity: 0;
+
+  }
+}
+
+.hamburgerIcon--open {
+  transform: rotate(45deg);
+  transition: transform .3s ease .1s;
+
+  .hamburgerIcon__1 {
+    transform: translateY(21%);
+  }
+
+  .hamburgerIcon__3 {
+    transform: translateY(-21%);
+  }
+
+  .hamburgerIcon__4 {
+    opacity: 1;
+    transition: opacity 0s ease 0s;
+  }
+}

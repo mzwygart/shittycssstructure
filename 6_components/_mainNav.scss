@@ -1,0 +1,134 @@
+.toggleMainNav {
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  max-width: 20%;
+  margin-right: 16px;
+
+  &__label {
+    display: inline-block;
+    margin-left: .3em;
+  }
+
+  @media (min-width: 768px){
+    display: none;
+  }
+}
+
+/* body */.nav-open {
+  @media (max-width: 767px) {
+    overflow: hidden;
+    z-index: -1;
+    position: relative;
+  }
+}
+
+
+.mainNav {
+
+  /*
+  ** Mobile & Tablet
+  */
+  @media (max-width: 767px) {
+    position: absolute;
+    background: white;
+    z-index: -1;
+    top: 118px; bottom: 0; left: 0; right: 0;
+    overflow: scroll;
+    min-height: calc(100vh - 118px);
+    transform: translateY(-100%);
+    transition: transform .3s ease;
+
+    .nav-open & {
+      transform: translateY(0);
+    }
+  }
+
+  /*
+  ** Desktop
+  */
+
+}
+
+.mainNav__lvl1 {
+  margin: 0;
+
+  @media (min-width: 767px) {
+    margin-left: -$space-4;
+    margin-right: -$space-4;
+    display: flex;
+  }
+}
+
+.mainNav__lvl1 > li > a {
+  padding: 0 $space-4;
+  font-size: $font-size-8;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+
+  .icon {
+    width: .5em;
+    transform: translateY(25%);
+  }
+}
+
+.sub-menu {
+  @include space('py', $space-1, '', $space-24)
+
+  @media (min-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 11;
+    position: absolute;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    box-shadow: 0px 37px 20px rgba(0, 0, 0, 0.1);
+    display: none;
+    background: white;
+
+    &::after {
+      content: "";
+      flex: auto;
+    }
+
+    .open & {
+      display: flex;
+    }
+  }
+
+  @media (min-width: 1680px){
+    padding-left: calc((100vw - 1400px - 6rem) / 2 );
+    padding-right: calc((100vw - 1400px - 6rem) / 2 );
+    padding-top: $space-24;
+  }
+}
+
+.sub-menu__bg {
+  pointer-events: none;
+  position: absolute;
+  top: $space-24;
+  bottom: $space-24;
+  width: 1480px;
+}
+
+.sub-menu li {
+  @media (min-width: 767px) {
+    width: 25%;
+    padding: 0 $space-12;
+  }
+}
+
+.sub-menu a {
+  display: block;
+  text-decoration: none;
+  font-family: $font-family-headings;
+  font-size: $font-size-8;
+  line-height: 1.4em;
+  padding: .5em 0;
+}

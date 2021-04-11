@@ -1,0 +1,13 @@
+.siteBranding {
+  display: block;
+  width: 50%;
+  max-width: 225px;
+  break-after: always;
+  margin-bottom: 15px;
+  fill: $color-primary;
+
+  @media (min-width: 1200px) {
+    break-after: avoid;
+    margin-bottom: 0;
+  }
+}

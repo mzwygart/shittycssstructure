@@ -1,0 +1,55 @@
+.postTeaser {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all .2s ease;
+
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+
+  &:hover,
+  &:focus-within {
+    transform: translate(-3px, -3px);
+    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.postTeaser__date {
+  @include space('px', $space-6)
+  @include space('mt', $space-6)
+}
+.postTeaser__title {
+  @include space('px', $space-6)
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.postTeaser__excerpt {
+  @include space('px', $space-6)
+
+  flex: 1;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+.postTeaser__readmore {
+  @include space('px', $space-6)
+  @include space('my', $space-6)
+  @include responsive-font-size($font-size-7)
+
+  opacity: 0;
+  text-decoration: none;
+  transition: opacity .2s ease .2s;
+
+  .icon {
+    width: 10px;
+    height: 10px;
+    margin-right: .5em;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}

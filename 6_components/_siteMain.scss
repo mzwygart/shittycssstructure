@@ -1,0 +1,8 @@
+.siteMain {
+  position: relative;
+  flex: 1;
+
+  .nav-open & {
+    z-index: -2;
+  }
+}

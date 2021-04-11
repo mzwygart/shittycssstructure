@@ -1,0 +1,22 @@
+.navBar {
+  @include space('py', $space-6);
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin: -40px 0 60px 0;
+}
+
+.navBar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.navBar li {
+  @include space('mr', $space-6);
+}
+
+.navBar a:not(.btn) {
+  color: white;
+  text-decoration: none;
+}

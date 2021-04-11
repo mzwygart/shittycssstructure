@@ -1,0 +1,22 @@
+.wysiwyg {
+  img {
+    margin-top: $space-6;
+    border-bottom: 10px solid var(--theme-color);
+  }
+}
+
+.wysiwyg li {
+  margin-bottom: .8em;
+  padding-left: .8em;
+  position: relative;
+
+  &::before {
+    content:"•";
+    display: inline;
+    vertical-align:middle;
+    color: $color-primary;
+    position: absolute;
+    left: 0;
+    font-size: .8em;
+  }
+}

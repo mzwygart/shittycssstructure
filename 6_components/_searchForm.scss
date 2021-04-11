@@ -1,0 +1,46 @@
+.searchForm {
+  width: calc(75% - 16px);
+  display: flex;
+  align-items: center;
+  border: 1px solid $color-grey-20;
+
+  @media (min-width: 768px){
+    width: 380px;
+  }
+
+  &:focus-within {
+    border-color: blue;
+  }
+
+  &__input {
+    margin: 0;
+    padding: .5em;
+    border: none;
+    flex: 1;
+    max-width: calc(100% - 36px);
+    font-size: $font-size-8;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__sep {
+    width: 1px;
+    height: 16px;
+    border: 1px solid $color-grey-20;
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+
+    .icon {
+      height: 16px;
+    }
+  }
+}

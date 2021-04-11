@@ -1,0 +1,25 @@
+.siteFooter {
+  @include space('py', 15px, '', '', $space-20);
+  @include responsive-font-size($font-size-6, '', $font-size-8, '', '');
+  @include space('mt', $space-10, '', '', $space-48)
+
+  position: relative;
+  background: $color-primary;
+  color: white;
+  margin-top: auto;
+
+  a {
+    color: white;
+  }
+
+  &__copyright {
+    @include space('mt', 15px, '', '', $space-20);
+
+    display: block;
+  }
+}
+
+.siteFooter__shape {
+  position: absolute;
+  bottom: 0; right: 0;
+}

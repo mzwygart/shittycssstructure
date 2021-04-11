@@ -1,0 +1,11 @@
+.socialMediaShare {
+  @include space('mt', $space-10, '', '', $space-20)  
+}
+
+.socialMediaShare__menu {
+  display: flex;
+
+  li:not(:first-child) {
+    margin-left: $space-4;
+  }
+}

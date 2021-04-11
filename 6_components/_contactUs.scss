@@ -1,0 +1,18 @@
+.contactUs {
+  display: grid;
+  grid-template-columns: .65fr 120px .8fr 240px;
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  position: relative;
+}
+
+.contactUs__content {
+  grid-column-start: 3;
+}
+
+.contactUs__corner {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 277px;
+}

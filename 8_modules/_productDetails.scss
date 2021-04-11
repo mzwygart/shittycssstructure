@@ -1,0 +1,15 @@
+.productDetails__shape {
+  position: absolute;
+  height: 560px;
+  fill: var(--theme-color);
+}
+
+.productDetails__shape--1 {
+  right: 0;
+  transform: translateY(50%);
+}
+
+.productDetails__shape--2 {
+  left: 0;
+  transform: translateY(-150%) rotate(180deg);
+}

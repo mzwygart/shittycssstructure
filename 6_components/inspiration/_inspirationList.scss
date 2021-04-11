@@ -1,0 +1,11 @@
+.inspirationList {
+  display: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+// .inspirationList > *:first-child {
+//   grid-column-start: 1;
+//   grid-column-end: 3;
+// }

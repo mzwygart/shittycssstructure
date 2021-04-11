@@ -1,0 +1,44 @@
+.gallery__slide {
+  margin-right: 20px;
+}
+
+.gallery .slick-dots {
+  display: flex;
+  justify-content: center;
+
+  button {
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    background: none;
+    text-indent: 80085px;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin: 0 5px;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 32px;
+      height: 5px;
+      transform: translate(-50%, -50%);
+      background: $color-grey-20;
+    }
+  }
+
+  .slick-active button::after {
+    background: $color-primary;
+  }
+}
+
+
+.gallery__caption {
+  @include responsive-font-size( $font-size-6, '', '', '', '');
+
+  margin-top: 1em;
+  font-style: italic;
+  color: $color-primary;
+}

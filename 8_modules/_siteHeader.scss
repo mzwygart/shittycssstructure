@@ -1,0 +1,38 @@
+.siteHeader {
+  @include space('py', 15px, '', '', $space-6, '');
+  @include space('pt', '', '', '', $space-20, '');
+  @include space('mb', $space-10, '', '', $space-20)
+
+  border-bottom: 1px solid $color-grey-20;
+  position: relative;
+  background: white;
+
+  @media (min-width: 768px){
+    border: none;
+  }
+}
+
+.siteHeader__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: 768px){
+    position: relative; // Required for positionning shortcuts
+  }
+
+  @media (min-width: 1200px){
+    align-items: flex-end;
+  }
+}
+
+.siteHeader__shortcuts {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: -60px;
+
+  @media (min-width: 768px){
+    display: block;
+  }
+}

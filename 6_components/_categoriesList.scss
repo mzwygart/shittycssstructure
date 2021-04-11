@@ -1,0 +1,32 @@
+.categoriesList {
+  @include responsive-font-size($font-size-6, '', '', '');
+  color: $color-primary;
+
+  a {
+    @include responsive-font-size($font-size-8, '', '', '');
+
+    text-decoration: none;
+    color: $color-text;
+    margin-right: .3em;
+  }
+
+  .icon {
+    height: 10px;
+    width: 6px;
+    fill: $color-text;
+    margin-left: .3em;
+    transition: transform .2s ease;
+  }
+
+  .children {
+    @include space('ml', $space-6)
+  }
+
+
+}
+
+.cat-item.open {
+  .icon {
+    transform: rotate(90deg);
+  }
+}

@@ -1,0 +1,20 @@
+/**
+ * Document defaults (html, body)
+ */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  @include responsive-font-size($font-size-7, '', $font-size-9-giftmedia, '', '');
+
+  font-family: $font-family-sans;
+  color: $color-text;
+  line-height: $line-height-base;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}

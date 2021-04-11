@@ -1,0 +1,80 @@
+.inspirationTeaser {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all .2s ease;
+
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+
+  &:hover,
+  &:focus-within {
+    transform: translate(-3px, -3px);
+    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.inspirationTeaser__cover {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  grid-gap: 20px;
+  position: relative;
+
+  img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+}
+
+.inspirationTeaser__kicker {
+  @include space('p', $space-2);
+
+  display: grid;
+  place-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+.inspirationTeaser__title {
+  @include space('mt', $space-6)
+  @include space('px', $space-6)
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.inspirationTeaser__excerpt {
+  @include space('px', $space-6)
+
+  flex: 1;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+.inspirationTeaser__readmore {
+  @include space('px', $space-6)
+  @include space('my', $space-6)
+  @include responsive-font-size($font-size-7)
+
+  opacity: 0;
+  text-decoration: none;
+  transition: opacity .2s ease .2s;
+
+  .icon {
+    width: 10px;
+    height: 10px;
+    margin-right: .5em;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
